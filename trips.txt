@@ -1,0 +1,4 @@
+direction_id,route_id,service_id,shape_id,trip_headsign,trip_id,trip_short_name
+0,NGV-3,NGV-3,ngv3_1,วงเวียน เข้า,NGV-3002,NGV-3 07:28 to วงเวียน เข้า
+0,NGV-3,NGV-3,ngv3_0,วงเวียน เข้า,NGV-3001,NGV-3 07:18 to วงเวียน เข้า
+0,NGV-1b,NGV-1b,ngv1b_0,โรงพิมพ์,NGV-1b001,NGV-1b 07:20 to โรงพิมพ์
