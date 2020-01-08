@@ -1,0 +1,35 @@
+2019-12-31 16:06:32,202 - root - INFO - start building map
+2019-12-31 16:06:32,236 - root - INFO - add STOP 08
+2019-12-31 16:06:32,236 - root - INFO - add STOP 09
+2019-12-31 16:06:32,237 - root - INFO - add STOP 10
+2019-12-31 16:06:32,237 - root - INFO - add STOP 11
+2019-12-31 16:06:32,237 - root - INFO - add STOP 30
+2019-12-31 16:06:32,237 - root - INFO - add STOP a14
+2019-12-31 16:06:32,238 - root - INFO - add STOP d11
+2019-12-31 16:06:32,238 - root - INFO - add STOP d09
+2019-12-31 16:06:32,238 - root - INFO - add STOP d07
+2019-12-31 16:06:32,238 - root - INFO - add STOP d04
+2019-12-31 16:06:32,238 - root - INFO - add STOP D03
+2019-12-31 16:06:32,239 - root - INFO - add STOP D02
+2019-12-31 16:06:32,239 - root - INFO - add STOP D01
+2019-12-31 16:06:32,239 - root - INFO - add STOP วงเวียน Asian
+2019-12-31 16:06:32,239 - root - INFO - add STOP 16
+2019-12-31 16:06:32,240 - root - INFO - add STOP 17
+2019-12-31 16:06:32,240 - root - INFO - add STOP 19
+2019-12-31 16:06:32,240 - root - INFO - add STOP 01
+2019-12-31 16:06:32,240 - root - INFO - add STOP 03
+2019-12-31 16:06:32,241 - root - INFO - add STOP 04
+2019-12-31 16:06:32,241 - root - INFO - add STOP 05
+2019-12-31 16:06:32,241 - root - INFO - add STOP JCCanteen
+2019-12-31 16:06:32,241 - root - INFO - add STOP JC Cinema
+2019-12-31 16:06:32,242 - root - INFO - add ROUTE ngv-1B
+2019-12-31 16:06:32,319 - root - INFO - add CAR 0TU0013 (3) rid: ngv-1B
+2019-12-31 16:06:32,319 - root - INFO - add CAR 0TU0021 (2) rid: ngv-1B
+2019-12-31 16:06:32,319 - root - INFO - add CAR 0TU0007 (3) rid: ngv-1B
+2019-12-31 16:06:32,319 - root - INFO - add CAR 0TU0015 (1A) rid: ngv-1B
+2019-12-31 16:06:32,320 - root - INFO - add CAR 0TU0002 (1A) rid: ngv-1B
+2019-12-31 16:06:32,320 - root - INFO - add CAR 0TU0018 (3) rid: ngv-1B
+2019-12-31 16:06:32,320 - root - INFO - add CAR 0TU0001 (1B) rid: ngv-1B
+2019-12-31 16:06:32,320 - root - INFO - add CAR 0TU0008 (4) rid: ngv-1B
+2019-12-31 16:06:32,320 - root - INFO - add CAR 0TU0006 (1B) rid: ngv-1B
+2019-12-31 16:06:32,357 - root - ERROR - END 0.15530705451965332 sec
