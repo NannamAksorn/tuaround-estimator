@@ -1,0 +1,13 @@
+[Unit]
+Description=Gnicorn instance
+After=network.target
+
+[Service]
+User=tuarounddev
+Group=www-data
+WorkingDirectory=/home/tuarounddev/tuaround-estimator/python
+Environment="PATH=/home/tuarounddev/tuaround-estimator/python/estimator_venv/bin"
+ExecStart=/home/tuarounddev/tuaround-estimator/python/estimator_venv/bin/gunicorn -k eventlet --workers 1 --bind 127.0.0.1:3000 wsgi:app
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
