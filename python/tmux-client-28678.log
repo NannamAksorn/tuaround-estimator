@@ -1,5 +1,0 @@
-1581231911.540503 client started (28678): version 2.6, socket /tmp/tmux-0/default, protocol 8
-1581231911.540520 on Linux 4.15.0-51-generic #55-Ubuntu SMP Wed May 15 14:27:21 UTC 2019; libevent 2.1.8-stable (poll)
-1581231911.540529 socket is /tmp/tmux-0/default
-1581231911.540536 trying connect
-1581231911.540545 connect failed: Permission denied

@@ -265,9 +265,10 @@ class Route:
 
 
 class Car:
-    def __init__(self, cid, route=""):
+    def __init__(self, cid, route="", alias=""):
         self.R: Route = route
         self.cid: str = cid
+        self.alias: str = alias or cid
         self.error: dict = {"out-route": 0, "stop": 0}
         self.status: str = 'init'
         self.pos: Point = None
@@ -280,6 +281,10 @@ class Car:
 
     def __repr__(self):
         return f'Car: {self.cid} {self.pos}'
+
+    def set_alias(self, alias):
+        self.alias = alias
+        return alias
 
     def set_route(self, route):
         self.R = route
@@ -402,6 +407,7 @@ class Map:
         # re-route
         if car.status == 'rr':
             self.re_route(car)
+        return car
 
     def re_route(self, car):
         match_route = (-99999, None)
