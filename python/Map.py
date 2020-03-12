@@ -24,6 +24,7 @@ class TimeTravelSpeed:
 
     def get_speed(self, sid="", time=datetime.now(), offset_sec=0):
         '''return speed in m/s'''
+        if offset_sec > 10000: offset_sec = 10000
         d = time + timedelta(seconds=offset_sec)
         weekday = d.weekday()
         hr = d.hour
@@ -214,17 +215,21 @@ class Stop:
         self.p: Point = p
         self.fastest: dict = {}
         self.incoming: dict = {}
+        self.isUpdated: bool = False
 
     def get_fastest(self):
         res = {}
         for key, value in self.fastest.items():
-            res[key[6:]] = {'i': value['cid'][5:7], 't': value['time'] // 60}
+            res[key[6:]] = {'i': value['cid'], 't': value['time'] // 60}
         return res
 
     def update(self, cid, rid, time):
         if rid not in self.fastest:
             self.fastest[rid] = {'cid': cid, 'time': time}
+            self.isUpdated = True
         elif time < self.fastest[rid]['time']:
+            if self.fastest[rid]['time'] // 60 != time // 60:
+                self.isUpdated = True
             self.fastest[rid] = {'cid': cid, 'time': time}
         if rid not in self.incoming:
             self.incoming[rid] = {}
@@ -330,7 +335,6 @@ class Car:
         # update passed stop
         start, to, stop, _, change = self.R.route['[S]'].values()
         # update next stops
-        time = datetime.now()
         cum_time = 0
         # first
         start, to, stop, _, change = self.R.route[self.sid].values()
@@ -338,9 +342,9 @@ class Car:
         dist = g.get_segment_by_id(self.sid).get_remain_dist(self.pos)
         # speed
         speed_dict = g.speed
-        speed = speed_dict.get_speed(self.sid, time)
-
+        speed = speed_dict.get_speed(self.sid)
         while True:
+            if speed < 1: speed = 1
             # t = d/v
             cum_time += dist / speed
             if not pd.isna(stop):
@@ -351,7 +355,7 @@ class Car:
 
             if to == "[E]":
                 break
-            speed = speed_dict.get_speed(to, time, cum_time)
+            speed = speed_dict.get_speed(to, offset_sec=cum_time)
             start, to, stop, dist, change = self.R.route[to].values()
         return updated_stop
 
@@ -362,6 +366,7 @@ class Map:
         self.S: dict = {}
         self.G: Graph = None
         self.C: dict = {}
+        self.OC: dict = {}
 
     def set_graph(self, graph):
         self.G = graph
@@ -377,6 +382,21 @@ class Map:
 
     def update_stop(self, sid, time):
         self.S[sid].update(time)
+
+    def update_online_cars(self, car_ids):
+        for cid in car_ids:
+            if cid not in self.C: continue
+            self.OC[cid] = 0
+        offline_list = []
+        for cid in self.OC:
+            self.OC[cid] += 1
+            offline_list.append(cid)
+        for cid  in offline_list: 
+            if self.OC[cid] > 30:
+                self.C[cid].status = 'ne' # network error
+                self.OC.pop(cid, None)
+            elif self.OC[cid] > 5:
+                self.C[cid].status = "pne" # pre network error
 
     def load(self, filename="data/map.pkl"):
         with open(filename, 'rb') as inp:
@@ -432,13 +452,12 @@ class Map:
             car.set_route(match_route[1])
 
     def estimate(self):
-        for cid in self.C:
+        for cid in self.OC:
+            if self.OC[cid] > 1: continue
             car = self.C[cid]
-            if car.status != 'ok':
-                continue
+            if car.status != 'ok': continue
             updated_stop = car.estimate(self.G)
-            # print(updated_stop, car.R.rid)
             rid = car.R.rid
             for sid, time in updated_stop.items():
-                self.S[sid].update(cid, rid, time)
+                self.S[sid].update(car.alias, rid, time)
         return

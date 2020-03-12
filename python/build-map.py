@@ -1,7 +1,6 @@
 from dbhelper import DBhelper
 from Compute import get_closest_segment_np
 from Map import Point, Segment, Graph, Stop, Route, Car, Map
-import geojson
 import pandas as pd
 import numpy as np
 import multiprocessing as mp
@@ -43,14 +42,14 @@ for i in route_no_list:
     M.add_route(route)
 
 # add car
-cars = db.get_all_car()
-for index, c in cars.iterrows():
-    cid = c[0]
-    rid = 'route-' + cid[cid.find("(") + 1: cid.find(")")].lower()
-    r = M.R.get(rid, route)
-    car = Car(cid, r)
-    logging.info(f'add CAR {cid} rid: {r.rid}')
-    M.add_car(car)
+# cars = db.get_all_car()
+# for index, c in cars.iterrows():
+#     cid = c[0]
+#     rid = 'route-' + cid[cid.find("(") + 1: cid.find(")")].lower()
+#     r = M.R.get(rid, route)
+#     car = Car(cid, r)
+#     logging.info(f'add CAR {cid} rid: {r.rid}')
+#     M.add_car(car)
 
 # save
 M.save()

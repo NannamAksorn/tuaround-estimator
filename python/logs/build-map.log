@@ -1,66 +1,57 @@
-2020-01-06 13:11:33,424 - root - INFO - START build-map.py
-2020-01-06 13:11:33,486 - root - INFO - add STOP 8
-2020-01-06 13:11:33,487 - root - INFO - add STOP jc_cin
-2020-01-06 13:11:33,487 - root - INFO - add STOP jc_can
-2020-01-06 13:11:33,487 - root - INFO - add STOP 5
-2020-01-06 13:11:33,487 - root - INFO - add STOP 4a
-2020-01-06 13:11:33,488 - root - INFO - add STOP 12
-2020-01-06 13:11:33,488 - root - INFO - add STOP 1a
-2020-01-06 13:11:33,488 - root - INFO - add STOP 13
-2020-01-06 13:11:33,488 - root - INFO - add STOP 14
-2020-01-06 13:11:33,489 - root - INFO - add STOP 15
-2020-01-06 13:11:33,489 - root - INFO - add STOP ra
-2020-01-06 13:11:33,489 - root - INFO - add STOP 16
-2020-01-06 13:11:33,489 - root - INFO - add STOP 17
-2020-01-06 13:11:33,490 - root - INFO - add STOP c1
-2020-01-06 13:11:33,490 - root - INFO - add STOP c2
-2020-01-06 13:11:33,490 - root - INFO - add STOP c3
-2020-01-06 13:11:33,490 - root - INFO - add STOP c4
-2020-01-06 13:11:33,490 - root - INFO - add STOP c7
-2020-01-06 13:11:33,491 - root - INFO - add STOP c9
-2020-01-06 13:11:33,491 - root - INFO - add STOP c11
-2020-01-06 13:11:33,491 - root - INFO - add STOP a14
-2020-01-06 13:11:33,491 - root - INFO - add STOP 30
-2020-01-06 13:11:33,492 - root - INFO - add STOP 11a
-2020-01-06 13:11:33,492 - root - INFO - add STOP 10a
-2020-01-06 13:11:33,492 - root - INFO - add STOP 9a
-2020-01-06 13:11:33,492 - root - INFO - add ROUTE route-1a
-2020-01-06 13:11:33,536 - root - INFO - add ROUTE route-1a_b
-2020-01-06 13:11:33,574 - root - INFO - add STOP 9
-2020-01-06 13:11:33,575 - root - INFO - add STOP 10
-2020-01-06 13:11:33,575 - root - INFO - add STOP 11
-2020-01-06 13:11:33,577 - root - INFO - add STOP 19
-2020-01-06 13:11:33,577 - root - INFO - add STOP 1
-2020-01-06 13:11:33,577 - root - INFO - add STOP 3
-2020-01-06 13:11:33,577 - root - INFO - add STOP 4
-2020-01-06 13:11:33,578 - root - INFO - add ROUTE route-1b
-2020-01-06 13:11:33,603 - root - INFO - add STOP 20
-2020-01-06 13:11:33,603 - root - INFO - add STOP 21
-2020-01-06 13:11:33,603 - root - INFO - add STOP 22
-2020-01-06 13:11:33,603 - root - INFO - add STOP 23
-2020-01-06 13:11:33,604 - root - INFO - add STOP 25
-2020-01-06 13:11:33,604 - root - INFO - add STOP 24
-2020-01-06 13:11:33,604 - root - INFO - add STOP hp
-2020-01-06 13:11:33,605 - root - INFO - add STOP 26
-2020-01-06 13:11:33,605 - root - INFO - add STOP 27
-2020-01-06 13:11:33,605 - root - INFO - add STOP 28
-2020-01-06 13:11:33,605 - root - INFO - add STOP 29
-2020-01-06 13:11:33,606 - root - INFO - add ROUTE route-2
-2020-01-06 13:11:33,631 - root - INFO - add STOP tu_dome
-2020-01-06 13:11:33,631 - root - INFO - add STOP cr
-2020-01-06 13:11:33,633 - root - INFO - add ROUTE route-3
-2020-01-06 13:11:33,677 - root - INFO - add STOP siit
-2020-01-06 13:11:33,678 - root - INFO - add STOP 7
-2020-01-06 13:11:33,679 - root - INFO - add STOP cp
-2020-01-06 13:11:33,680 - root - INFO - add ROUTE route-4
-2020-01-06 13:11:33,709 - root - INFO - add ROUTE route-5
-2020-01-06 13:11:33,782 - root - INFO - add CAR 0TU0013 (3) rid: route-3
-2020-01-06 13:11:33,782 - root - INFO - add CAR 0TU0021 (2) rid: route-2
-2020-01-06 13:11:33,782 - root - INFO - add CAR 0TU0007 (3) rid: route-3
-2020-01-06 13:11:33,782 - root - INFO - add CAR 0TU0015 (1A) rid: route-1a
-2020-01-06 13:11:33,783 - root - INFO - add CAR 0TU0002 (1A) rid: route-1a
-2020-01-06 13:11:33,783 - root - INFO - add CAR 0TU0018 (3) rid: route-3
-2020-01-06 13:11:33,783 - root - INFO - add CAR 0TU0001 (1B) rid: route-1b
-2020-01-06 13:11:33,783 - root - INFO - add CAR 0TU0008 (4) rid: route-4
-2020-01-06 13:11:33,783 - root - INFO - add CAR 0TU0006 (1B) rid: route-1b
-2020-01-06 13:11:33,822 - root - INFO - FINISH build-map.py 0.39832019805908203 sec
+2020-03-12 07:57:15,347 - root - INFO - START build-map.py
+2020-03-12 07:57:15,552 - root - INFO - add STOP 8
+2020-03-12 07:57:15,553 - root - INFO - add STOP jc_cin
+2020-03-12 07:57:15,553 - root - INFO - add STOP jc_can
+2020-03-12 07:57:15,553 - root - INFO - add STOP 5
+2020-03-12 07:57:15,553 - root - INFO - add STOP 4a
+2020-03-12 07:57:15,553 - root - INFO - add STOP 12
+2020-03-12 07:57:15,554 - root - INFO - add STOP 1a
+2020-03-12 07:57:15,554 - root - INFO - add STOP 13
+2020-03-12 07:57:15,554 - root - INFO - add STOP 14
+2020-03-12 07:57:15,554 - root - INFO - add STOP 15
+2020-03-12 07:57:15,554 - root - INFO - add STOP ra
+2020-03-12 07:57:15,554 - root - INFO - add STOP 16
+2020-03-12 07:57:15,555 - root - INFO - add STOP 17
+2020-03-12 07:57:15,555 - root - INFO - add STOP c1
+2020-03-12 07:57:15,555 - root - INFO - add STOP c2
+2020-03-12 07:57:15,555 - root - INFO - add STOP c3
+2020-03-12 07:57:15,556 - root - INFO - add STOP c4
+2020-03-12 07:57:15,556 - root - INFO - add STOP c7
+2020-03-12 07:57:15,556 - root - INFO - add STOP c9
+2020-03-12 07:57:15,556 - root - INFO - add STOP c11
+2020-03-12 07:57:15,557 - root - INFO - add STOP a14
+2020-03-12 07:57:15,557 - root - INFO - add STOP 30
+2020-03-12 07:57:15,557 - root - INFO - add STOP 11a
+2020-03-12 07:57:15,557 - root - INFO - add STOP 10a
+2020-03-12 07:57:15,557 - root - INFO - add STOP 9a
+2020-03-12 07:57:15,557 - root - INFO - add ROUTE route-1a
+2020-03-12 07:57:15,593 - root - INFO - add ROUTE route-1a_b
+2020-03-12 07:57:15,636 - root - INFO - add STOP 9
+2020-03-12 07:57:15,636 - root - INFO - add STOP 10
+2020-03-12 07:57:15,636 - root - INFO - add STOP 11
+2020-03-12 07:57:15,638 - root - INFO - add STOP 19
+2020-03-12 07:57:15,638 - root - INFO - add STOP 1
+2020-03-12 07:57:15,638 - root - INFO - add STOP 3
+2020-03-12 07:57:15,638 - root - INFO - add STOP 4
+2020-03-12 07:57:15,639 - root - INFO - add ROUTE route-1b
+2020-03-12 07:57:15,659 - root - INFO - add STOP 20
+2020-03-12 07:57:15,659 - root - INFO - add STOP 21
+2020-03-12 07:57:15,659 - root - INFO - add STOP 22
+2020-03-12 07:57:15,659 - root - INFO - add STOP 23
+2020-03-12 07:57:15,660 - root - INFO - add STOP 25
+2020-03-12 07:57:15,660 - root - INFO - add STOP 24
+2020-03-12 07:57:15,660 - root - INFO - add STOP hp
+2020-03-12 07:57:15,660 - root - INFO - add STOP 26
+2020-03-12 07:57:15,660 - root - INFO - add STOP 27
+2020-03-12 07:57:15,661 - root - INFO - add STOP 28
+2020-03-12 07:57:15,661 - root - INFO - add STOP 29
+2020-03-12 07:57:15,662 - root - INFO - add ROUTE route-2
+2020-03-12 07:57:15,681 - root - INFO - add STOP tu_dome
+2020-03-12 07:57:15,681 - root - INFO - add STOP cr
+2020-03-12 07:57:15,683 - root - INFO - add ROUTE route-3
+2020-03-12 07:57:15,710 - root - INFO - add STOP siit
+2020-03-12 07:57:15,710 - root - INFO - add STOP 7
+2020-03-12 07:57:15,710 - root - INFO - add STOP cp
+2020-03-12 07:57:15,710 - root - INFO - add ROUTE route-4
+2020-03-12 07:57:15,732 - root - INFO - add ROUTE route-5
+2020-03-12 07:57:15,753 - root - INFO - FINISH build-map.py 0.4058716297149658 sec
