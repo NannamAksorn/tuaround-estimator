@@ -85,6 +85,8 @@ if __name__  == "__main__":
                     processed_data = format_processed_data(car)
                     if not processed_data: continue
                     producer.send('processed-gps-topic', value=processed_data)
+                if car.status == 'ne':
+                    M.OC.pop(cid, None)
 
             for sid in M.S:
                 stop = M.S[sid]

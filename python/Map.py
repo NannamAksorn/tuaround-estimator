@@ -394,7 +394,6 @@ class Map:
         for cid  in offline_list: 
             if self.OC[cid] > 30:
                 self.C[cid].status = 'ne' # network error
-                self.OC.pop(cid, None)
             elif self.OC[cid] > 5:
                 self.C[cid].status = "pne" # pre network error
 
