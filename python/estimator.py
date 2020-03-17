@@ -79,7 +79,7 @@ if __name__  == "__main__":
                     producer.send('processed-gps-topic', value=processed_data)
             M.estimate()
             M.update_online_cars(car_ids)
-            for cid in M.OC:
+            for cid in list(M.OC):
                 car = M.C[cid]
                 if car.status == "pne" or car.status == "ne":
                     processed_data = format_processed_data(car)

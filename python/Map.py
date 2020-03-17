@@ -220,7 +220,7 @@ class Stop:
     def get_fastest(self):
         res = {}
         for key, value in self.fastest.items():
-            res[key[6:]] = {'i': value['cid'], 't': value['time'] // 60}
+            res[key[6:]] = {'i': value['cid'], 't': value['time'] // 60, 'k': key[6:]}
         return res
 
     def update(self, cid, rid, time):

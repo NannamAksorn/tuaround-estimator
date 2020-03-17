@@ -1,25 +1,66 @@
-2020-03-14 17:42:36,436 - root - INFO - Started estimator.py
-2020-03-14 17:42:36,445 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
-2020-03-14 17:42:36,445 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
-2020-03-14 17:42:36,448 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
-2020-03-14 17:42:36,448 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
-2020-03-14 17:42:36,449 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
-2020-03-14 17:42:36,551 - kafka.conn - INFO - Broker version identifed as 0.11.0
-2020-03-14 17:42:36,552 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
-2020-03-14 17:42:36,552 - kafka.coordinator.consumer - WARNING - group_id is None: disabling auto-commit.
-2020-03-14 17:42:36,553 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('gps-log-topic',)
-2020-03-14 17:42:36,553 - root - INFO - Running Consumer...
-2020-03-14 17:42:36,553 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
-2020-03-14 17:42:36,553 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
-2020-03-14 17:42:36,555 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
-2020-03-14 17:42:36,555 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
-2020-03-14 17:42:36,556 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
-2020-03-14 17:42:36,657 - kafka.conn - INFO - Broker version identifed as 0.11.0
-2020-03-14 17:42:36,657 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
-2020-03-14 17:42:36,659 - root - INFO - Running Producer...
-2020-03-14 17:42:38,661 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='gps-log-topic', partition=0)]
-2020-03-14 17:42:38,667 - root - INFO - init new car TU0020 (1A)
-2020-03-14 17:42:38,672 - root - INFO - init new car TU0019 (1A)
-2020-03-14 17:43:25,047 - root - INFO - init new car TU0002 (1A)
-2020-03-14 17:43:53,856 - root - INFO - init new car TU0010 (1B)
-2020-03-14 17:46:04,193 - root - INFO - init new car TU0021 (2)
+2020-03-17 08:24:34,802 - root - INFO - Started estimator.py
+2020-03-17 08:24:34,812 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
+2020-03-17 08:24:34,812 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
+2020-03-17 08:24:34,813 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
+2020-03-17 08:24:34,813 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
+2020-03-17 08:24:34,815 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
+2020-03-17 08:24:34,916 - kafka.conn - INFO - Broker version identifed as 0.11.0
+2020-03-17 08:24:34,917 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
+2020-03-17 08:24:34,917 - kafka.coordinator.consumer - WARNING - group_id is None: disabling auto-commit.
+2020-03-17 08:24:34,918 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('gps-log-topic',)
+2020-03-17 08:24:34,918 - root - INFO - Running Consumer...
+2020-03-17 08:24:34,918 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
+2020-03-17 08:24:34,918 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
+2020-03-17 08:24:34,919 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
+2020-03-17 08:24:34,919 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
+2020-03-17 08:24:34,920 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
+2020-03-17 08:24:35,021 - kafka.conn - INFO - Broker version identifed as 0.11.0
+2020-03-17 08:24:35,021 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
+2020-03-17 08:24:35,022 - root - INFO - Running Producer...
+2020-03-17 08:24:37,024 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='gps-log-topic', partition=0)]
+2020-03-17 08:24:37,507 - root - INFO - init new car TU0019 (1A)
+2020-03-17 08:24:39,513 - root - INFO - init new car TU0007 (3)
+2020-03-17 08:24:39,516 - root - INFO - init new car TU0013 (3)
+2020-03-17 08:24:39,520 - root - INFO - init new car TU0066 (1B)
+2020-03-17 08:24:39,523 - root - INFO - init new car TU0021 (2)
+2020-03-17 08:25:56,225 - root - INFO - init new car TU0002 (1A)
+2020-03-17 08:26:56,842 - root - INFO - init new car TU0010 (1B)
+2020-03-17 08:31:19,793 - root - INFO - init new car TU0016 (3)
+2020-03-17 08:33:29,478 - root - INFO - init new car TU0015 (1A)
+2020-03-17 08:46:44,403 - root - INFO - init new car TU0018 (3)
+2020-03-17 09:13:23,675 - root - INFO - gps-log-topic:0:163413: key=None value=b'["TU0013 (3)",1584411202,14.06988,100.60169,10.872,185]'
+2020-03-17 09:13:23,676 - root - ERROR - message
+Traceback (most recent call last):
+  File "estimator.py", line 80, in <module>
+    M.estimate()
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 458, in estimate
+    updated_stop = car.estimate(self.G)
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 358, in estimate
+    speed = speed_dict.get_speed(to, offset_sec=cum_time)
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 32, in get_speed
+    return self.time[sid][weekday][hr][minute][0] / 3.6
+KeyError: nan
+2020-03-17 09:13:25,701 - root - INFO - gps-log-topic:0:163420: key=None value=b'["TU0013 (3)",1584411204,14.0698,100.60168,14.796,183]'
+2020-03-17 09:13:25,702 - root - ERROR - message
+Traceback (most recent call last):
+  File "estimator.py", line 80, in <module>
+    M.estimate()
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 458, in estimate
+    updated_stop = car.estimate(self.G)
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 358, in estimate
+    speed = speed_dict.get_speed(to, offset_sec=cum_time)
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 32, in get_speed
+    return self.time[sid][weekday][hr][minute][0] / 3.6
+KeyError: nan
+2020-03-17 09:13:27,728 - root - INFO - gps-log-topic:0:163427: key=None value=b'["TU0013 (3)",1584411206,14.0697,100.60166,19.08,184]'
+2020-03-17 09:13:27,728 - root - ERROR - message
+Traceback (most recent call last):
+  File "estimator.py", line 80, in <module>
+    M.estimate()
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 458, in estimate
+    updated_stop = car.estimate(self.G)
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 358, in estimate
+    speed = speed_dict.get_speed(to, offset_sec=cum_time)
+  File "/home/tuarounddev/tuaround-estimator/python/Map.py", line 32, in get_speed
+    return self.time[sid][weekday][hr][minute][0] / 3.6
+KeyError: nan
