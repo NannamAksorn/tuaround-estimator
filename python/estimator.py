@@ -64,7 +64,7 @@ if __name__  == "__main__":
 
     while True:
         try:
-            time.sleep(2)
+            time.sleep(.2)
             msg_pack = consumer.poll(timeout_ms=2000)
             # no data
             if len(msg_pack) == 0: continue

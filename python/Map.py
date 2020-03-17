@@ -9,14 +9,16 @@ from Compute import haversine_np, \
     bearing, inverse_bearing, turn_dist, bad, cross_track_dist, \
     cross_track_point, remain_dist, get_closest_segment_np
 
+INVALID = 9999
 
+INITIAL_SPEED = 15
 class TimeTravelSpeed:
     def __init__(self):
         self.time: dict = {}
         self.sample_period = 5
 
     def init_segment(self, sid):
-        initial_speed = 15
+        initial_speed = INITIAL_SPEED
         count = 1
         sample_freq = 60 // self.sample_period
         self.time[sid] = np.array((initial_speed, count) * sample_freq * 24 * 7).reshape(7, 24, sample_freq, 2)
@@ -24,6 +26,7 @@ class TimeTravelSpeed:
 
     def get_speed(self, sid="", time=datetime.now(), offset_sec=0):
         '''return speed in m/s'''
+        if sid not in self.time: return INITIAL_SPEED
         if offset_sec > 10000: offset_sec = 10000
         d = time + timedelta(seconds=offset_sec)
         weekday = d.weekday()
@@ -221,24 +224,27 @@ class Stop:
         res = {}
         for key, value in self.fastest.items():
             res[key[6:]] = {'i': value['cid'], 't': value['time'] // 60, 'k': key[6:]}
+            # res[key[6:]] = {'i': value['cid'], 't': value['time'], 'k': key[6:]}
         return res
 
     def update(self, cid, rid, time):
         if rid not in self.fastest:
             self.fastest[rid] = {'cid': cid, 'time': time}
             self.isUpdated = True
-        elif time < self.fastest[rid]['time']:
+        elif time < self.fastest[rid]['time'] or self.fastest[rid]['cid'] == cid:
             if self.fastest[rid]['time'] // 60 != time // 60:
                 self.isUpdated = True
             self.fastest[rid] = {'cid': cid, 'time': time}
+        # init case
         if rid not in self.incoming:
             self.incoming[rid] = {}
         elif cid not in self.incoming[rid]:
             self.incoming[rid][cid] = {}
         self.incoming[rid][cid] = {'cid': cid, 'time': time}
         # passed case
-        if time == 3600 and self.fastest[rid]['cid'] == cid:
-            self.fastest[rid]['time'] = 3600
+        if time == INVALID and self.fastest[rid]['cid'] == cid:
+            self.isUpdated = True
+            self.fastest[rid]['time'] = INVALID
 
 
 
@@ -250,7 +256,7 @@ class Route:
 
     def add_stop(self, stop):
         """add stop to dict set init time-to-travel to 3600 sec"""
-        self.stops[stop] = 3600
+        self.stops[stop] = INVALID
 
     def add_way(self, graph, s_from, s_to, stop=None, dist=0, change=None):
         if (dist == 0 or pd.isna(dist)) and (s_from != '[S]'):
@@ -331,32 +337,36 @@ class Car:
             return 0
 
     def estimate(self, g):
-        updated_stop = self.R.stops.copy()
-        # update passed stop
-        start, to, stop, _, change = self.R.route['[S]'].values()
-        # update next stops
+        # INIT
+        updated_stop = {}
+        for sid in self.R.stops:
+            updated_stop[sid] = INVALID 
+        if self.status != 'ok': return updated_stop
+        speed_dict = g.speed
         cum_time = 0
+
         # first
-        start, to, stop, _, change = self.R.route[self.sid].values()
+        start, to, stop, _, _ = self.R.route[self.sid].values()
         # remain dist
         dist = g.get_segment_by_id(self.sid).get_remain_dist(self.pos)
         # speed
-        speed_dict = g.speed
         speed = speed_dict.get_speed(self.sid)
         while True:
             if speed < 1: speed = 1
             # t = d/v
             cum_time += dist / speed
             if not pd.isna(stop):
-                if stop in updated_stop and updated_stop[stop] > cum_time:
-                    updated_stop[stop] = cum_time
-                else:
-                    updated_stop[stop] = cum_time
-
+                if updated_stop[stop] != INVALID: 
+                    break
+                updated_stop[stop] = cum_time
+            # Loop
             if to == "[E]":
-                break
-            speed = speed_dict.get_speed(to, offset_sec=cum_time)
+                _, to, _  ,_, _= self.R.route['[S]'].values()
+                # break
+            if to not in self.R.route: break
             start, to, stop, dist, change = self.R.route[to].values()
+            speed = speed_dict.get_speed(start, offset_sec=cum_time)
+        # print(updated_stop)
         return updated_stop
 
 
@@ -447,14 +457,12 @@ class Map:
             cid = car.cid
             rid = car.R.rid
             for sid in car.R.stops:
-                self.S[sid].update(cid, rid, 3600)
+                self.S[sid].update(cid, rid, INVALID)
             car.set_route(match_route[1])
 
     def estimate(self):
         for cid in self.OC:
-            if self.OC[cid] > 1: continue
             car = self.C[cid]
-            if car.status != 'ok': continue
             updated_stop = car.estimate(self.G)
             rid = car.R.rid
             for sid, time in updated_stop.items():
