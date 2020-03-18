@@ -1,20 +1,20 @@
-2020-03-18 05:59:11,273 - root - INFO - Started estimator.py
-2020-03-18 05:59:11,281 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
-2020-03-18 05:59:11,282 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
-2020-03-18 05:59:11,284 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
-2020-03-18 05:59:11,284 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
-2020-03-18 05:59:11,286 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
-2020-03-18 05:59:11,388 - kafka.conn - INFO - Broker version identifed as 0.11.0
-2020-03-18 05:59:11,388 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
-2020-03-18 05:59:11,389 - kafka.coordinator.consumer - WARNING - group_id is None: disabling auto-commit.
-2020-03-18 05:59:11,389 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('gps-log-topic',)
-2020-03-18 05:59:11,389 - root - INFO - Running Consumer...
-2020-03-18 05:59:11,389 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
-2020-03-18 05:59:11,390 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
-2020-03-18 05:59:11,392 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
-2020-03-18 05:59:11,392 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
-2020-03-18 05:59:11,392 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
-2020-03-18 05:59:11,494 - kafka.conn - INFO - Broker version identifed as 0.11.0
-2020-03-18 05:59:11,494 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
-2020-03-18 05:59:11,495 - root - INFO - Running Producer...
-2020-03-18 05:59:11,697 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='gps-log-topic', partition=0)]
+2020-03-18 07:02:29,026 - root - INFO - Started estimator.py
+2020-03-18 07:02:29,035 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
+2020-03-18 07:02:29,036 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
+2020-03-18 07:02:29,038 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
+2020-03-18 07:02:29,038 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
+2020-03-18 07:02:29,039 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
+2020-03-18 07:02:29,141 - kafka.conn - INFO - Broker version identifed as 0.11.0
+2020-03-18 07:02:29,141 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
+2020-03-18 07:02:29,142 - kafka.coordinator.consumer - WARNING - group_id is None: disabling auto-commit.
+2020-03-18 07:02:29,142 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('gps-log-topic',)
+2020-03-18 07:02:29,142 - root - INFO - Running Consumer...
+2020-03-18 07:02:29,143 - kafka.client - INFO - Bootstrapping cluster metadata from [('127.0.0.1', 9092, <AddressFamily.AF_INET: 2>)]
+2020-03-18 07:02:29,143 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: connecting to 127.0.0.1:9092
+2020-03-18 07:02:29,144 - kafka.client - INFO - Bootstrap succeeded: found 1 brokers and 3 topics.
+2020-03-18 07:02:29,145 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap host=127.0.0.1/127.0.0.1 port=9092>: Closing connection. 
+2020-03-18 07:02:29,145 - kafka.conn - INFO - <BrokerConnection node_id=0 host=dolphin-desktop/127.0.1.1 port=9092>: connecting to 127.0.1.1:9092
+2020-03-18 07:02:29,247 - kafka.conn - INFO - Broker version identifed as 0.11.0
+2020-03-18 07:02:29,247 - kafka.conn - INFO - Set configuration api_version=(0, 11, 0) to skip auto check_version requests on startup
+2020-03-18 07:02:29,248 - root - INFO - Running Producer...
+2020-03-18 07:02:31,251 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='gps-log-topic', partition=0)]

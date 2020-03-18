@@ -51,8 +51,8 @@ if __name__  == "__main__":
     kafka_server = ['127.0.0.1:9092']
     consumer = KafkaConsumer('gps-log-topic',
                     bootstrap_servers=kafka_server,
-                    # max_poll_records=100,
-                    max_poll_records=5,
+                    max_poll_records=100,
+                    # max_poll_records=5,
                     auto_offset_reset="earliest",
     )
     logging.info("Running Consumer...")
@@ -64,7 +64,7 @@ if __name__  == "__main__":
 
     while True:
         try:
-            time.sleep(.2)
+            time.sleep(2)
             msg_pack = consumer.poll(timeout_ms=2000)
             # no data
             if len(msg_pack) == 0: continue
